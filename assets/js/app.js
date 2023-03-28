@@ -2403,7 +2403,7 @@
             if (!Global.PLAYGROUND && !Tests.preventHistory()) this._setState(state)
         }, this.currentState = function () {
             let state = this.getState();
-            return state.includes(["home", "work", "lab", "about"]) ? state : "home"
+            return state.includes(["home", "work", "about"]) ? state : "home"
         }, this.setNav = function (state) {
             this._setState(state), stateChange({
                 value: state,
@@ -5472,13 +5472,13 @@
         }
     }), Class(function About() {
         function initSEO() {
-            ($seo = $("About", "section")).html("\n        <h1>ABOUT</h1>\n        <p>We’re pushing the future of Web Technology.<br/>\n\n        The web is a powerful, frictionless and evolving platform that we use to tell engaging and visually rich stories. Our websites, apps, installations, VR and AR experiences are all grounded in cross-platform JavaScript.<br/>\n\n        We're a small, tightly integrated team that focuses on performance, efficiency and attention to detail. Since opening in 2012, we have iterated on a toolset that encourages iterative collaboration between designers and developers in order to create award-winning work.\n        ")
+            ($seo = $("About", "section")).html("\n        <h1>ABOUT</h1>\n        <p>Tharang 2K23<br/>\n\n        Jyothi Engineering College ")
         }
         Inherit(this, Object3D);
         const _this = this;
         var _view, $seo;
         initSEO(), (_view = _this.initClass(AboutView)).visible = !1, this.activate = function () {
-            _this.group.visible = !0, _view.visible = !0, SEO.add($seo), _view.animateIn(), Data.setState("about"), Data.setTitle("About / Stf Kolev"), AboutCamera.instance().animateIn(), Camera.instance().use(AboutCamera.instance())
+            _this.group.visible = !0, _view.visible = !0, SEO.add($seo), _view.animateIn(), Data.setState("about"), Data.setTitle("About / Tharang 2K23"), AboutCamera.instance().animateIn(), Camera.instance().use(AboutCamera.instance())
         }, this.animateOut = function () {
             _view.animateOut(), AboutCamera.instance().animateOut()
         }, this.deactivate = function () {
@@ -5487,7 +5487,7 @@
             let promise = Promise.create();
             return _this.events.fire(ATEvents.INTERNAL_STATE, {
                 state: "alley/about"
-            }), _this.flag("prerendered") ? Promise.resolve() : (await AlleyLoader.instance().aboutReady(), Data.setState("about"), Data.setTitle("About / Stf Kolev"), Tracking.page("About", "/about"), _this.group.visible = !0, Utils3D.forceVisible(_this.group), setTimeout(_ => {
+            }), _this.flag("prerendered") ? Promise.resolve() : (await AlleyLoader.instance().aboutReady(), Data.setState("about"), Data.setTitle("About / Tharang 2K23"), Tracking.page("About", "/about"), _this.group.visible = !0, Utils3D.forceVisible(_this.group), setTimeout(_ => {
                 Utils3D.resetForceVisible(_this.group), promise.resolve(), _this.flag("prerendered", !0)
             }, 250), promise)
         }
@@ -5520,7 +5520,7 @@
         }
 
         function initSEO() {
-            ($seo = $("Home", "section")).html("\n        <h1>Stf Kolev</h1>\n        <p>Stf Kolev is a designer creative digital experiences. I'm pushing the future of web technology.</p>\n        ")
+            ($seo = $("Home", "section")).html("\n        <h1>Tharang 2K23</h1>\n        <p>Jyothi Engineering College Thrissur</p>\n        ")
         }
 
         function resizeHandler() {
@@ -5533,7 +5533,7 @@
         !async function () {
             initSEO(), await AlleyLoader.instance().ready(), initView(), _this.group.visible = !1
         }(), this.activate = async function () {
-            SEO.add($seo), await AlleyLoader.instance().ready(), Data.setTitle("Stf Kolev"), resizeHandler(), _this.events.sub(Events.RESIZE, resizeHandler), _this.group.visible = !0, _alley.visible = !0, _alley.animateIn && _alley.animateIn(), _video && _video.animateIn(), _ui = _this.initClass(AlleyUI), _this.delayedCall(_ui.animateIn, 3500), AlleyCamera.instance().animateIn(), Camera.instance().use(AlleyCamera.instance()), FX.Logo.instance().animateIn()
+            SEO.add($seo), await AlleyLoader.instance().ready(), Data.setTitle("Tharang 2K23"), resizeHandler(), _this.events.sub(Events.RESIZE, resizeHandler), _this.group.visible = !0, _alley.visible = !0, _alley.animateIn && _alley.animateIn(), _video && _video.animateIn(), _ui = _this.initClass(AlleyUI), _this.delayedCall(_ui.animateIn, 3500), AlleyCamera.instance().animateIn(), Camera.instance().use(AlleyCamera.instance()), FX.Logo.instance().animateIn()
         }, this.animateOut = function () {
             _video && _video.animateOut(), _ui && _ui.animateOut(function () {
                 _ui = _ui.destroy()
@@ -5544,7 +5544,7 @@
             let promise = Promise.create();
             return _this.events.fire(ATEvents.INTERNAL_STATE, {
                 state: "alley/alley"
-            }), _this.flag("prerendered") ? Promise.resolve() : (await AlleyLoader.instance().ready(), Data.setState("home"), Data.setTitle("Stf Kolev"), Tracking.page("Home", "/home"), _this.group.visible = !0, Utils3D.forceVisible(_this.group), setTimeout(_ => {
+            }), _this.flag("prerendered") ? Promise.resolve() : (await AlleyLoader.instance().ready(), Data.setState("home"), Data.setTitle("Tharang 2K23"), Tracking.page("Home", "/home"), _this.group.visible = !0, Utils3D.forceVisible(_this.group), setTimeout(_ => {
                 Utils3D.resetForceVisible(_this.group), promise.resolve(), LabelUtil.pause(), _this.flag("prerendered", !0)
             }, 100), promise)
         }
@@ -6026,8 +6026,8 @@
             let state = Data.currentState();
             if (state.includes(Model.type)) {
                 let perma = state.split(Model.type + "/")[1];
-                _list.trigger(perma) || (Data.setState(Model.type), Data.setTitle(`${Model.type.capitalize()} / Stf Kolev`), Tracking.page(`${Model.type.capitalize()}`, `/${Model.type}`), SEO.add(_list.$seo))
-            } else Data.setState(Model.type), Data.setTitle(`${Model.type.capitalize()} / Stf Kolev`), Tracking.page(`${Model.type.capitalize()}`, `/${Model.type}`), SEO.add(_list.$seo)
+                _list.trigger(perma) || (Data.setState(Model.type), Data.setTitle(`${Model.type.capitalize()} / Tharang 2K23`), Tracking.page(`${Model.type.capitalize()}`, `/${Model.type}`), SEO.add(_list.$seo))
+            } else Data.setState(Model.type), Data.setTitle(`${Model.type.capitalize()} / Tharang 2K23`), Tracking.page(`${Model.type.capitalize()}`, `/${Model.type}`), SEO.add(_list.$seo)
         }
 
         function keyboardEvent(e) {
@@ -6046,7 +6046,7 @@
                 state: "work/list"
             }), _isOnWork = !1, _peel = 0, _video.lighten(), _scroll.stopInertia(), _scroll.preventInertia = !0, _activeWork && _activeWork.view && (SEO.remove(_activeWork.view.$seo), _activeWork.view.animateOut().then(_ => {
                 _activeWork.view = _activeWork.view.destroy()
-            })), _activeWork && _activeWork.videoTexture && _activeWork.videoTexture.pause(), _list.preventRender = !1, Data.setState(Model.type), Data.setTitle(`${Model.type.capitalize()} / Stf Kolev`), Tracking.page(`${Model.type.capitalize()}`, `/${Model.type}`), Data.lock(), await _video.transition(!0), _this.delayedCall(_ => Data.unlock(), 250), _list.preventScroll = !1, _scroll.preventInertia = !1, _video.from = _list.rt.texture, _video.reset()
+            })), _activeWork && _activeWork.videoTexture && _activeWork.videoTexture.pause(), _list.preventRender = !1, Data.setState(Model.type), Data.setTitle(`${Model.type.capitalize()} / Tharang 2K23`), Tracking.page(`${Model.type.capitalize()}`, `/${Model.type}`), Data.lock(), await _video.transition(!0), _this.delayedCall(_ => Data.unlock(), 250), _list.preventScroll = !1, _scroll.preventInertia = !1, _video.from = _list.rt.texture, _video.reset()
         }
         async function listClick(e) {
             _activeWork && (e.data.index < _activeWork.index ? _video.direction = -1 : _video.direction = 1), SEO.remove(_list.$seo), _this.delayedCall(_ => {
@@ -6055,7 +6055,7 @@
             let video = e.data.videoTexture;
             _video.to = video ? video.texture : null, video && video.play(), _this.events.fire(ATEvents.INTERNAL_STATE, {
                 state: "work/detail"
-            }), (_activeWork = e.data).view && (_activeWork.view = _activeWork.view.destroy()), _activeWork.view = _this.initClass(WorkUIProject, e.data, e.item.getClone()), _this.delayedCall(_activeWork.view.animateIn, 200), SEO.add(_activeWork.view.$seo), Data.setState(`${Model.type}/${_activeWork.perma}`), Data.setTitle(`${_activeWork.title} / Stf Kolev`), Tracking.page(`${_activeWork.title}`, `/${Model.type}/${_activeWork.perma}`), Data.lock(), _video.darken(), await _video.transition(), _isOnWork = !0, _this.delayedCall(_ => Data.unlock(), 250), _video.from = video ? video.texture : null, _video.reset(), _video.to = _list.rt.texture
+            }), (_activeWork = e.data).view && (_activeWork.view = _activeWork.view.destroy()), _activeWork.view = _this.initClass(WorkUIProject, e.data, e.item.getClone()), _this.delayedCall(_activeWork.view.animateIn, 200), SEO.add(_activeWork.view.$seo), Data.setState(`${Model.type}/${_activeWork.perma}`), Data.setTitle(`${_activeWork.title} / Tharang 2K23`), Tracking.page(`${_activeWork.title}`, `/${Model.type}/${_activeWork.perma}`), Data.lock(), _video.darken(), await _video.transition(), _isOnWork = !0, _this.delayedCall(_ => Data.unlock(), 250), _video.from = video ? video.texture : null, _video.reset(), _video.to = _list.rt.texture
         }
 
         function listUIHover() {
@@ -6067,7 +6067,7 @@
         function externalState(e) {
             if (!e.value.includes(Model.type)) return;
             let trigger = perma => {
-                    _list.trigger(perma) || (Data.setState(Model.type), Data.setTitle(`${Model.type.capitalize()} / Stf Kolev`))
+                    _list.trigger(perma) || (Data.setState(Model.type), Data.setTitle(`${Model.type.capitalize()} / Tharang 2K23`))
                 },
                 perma = e.split[1];
             _isOnWork ? (_this.events.fire(ATEvents.LIST_ITEM_EXIT, {
@@ -7981,10 +7981,10 @@
         function click() {
             switch (_type) {
                 case "tw":
-                    open("https://twitter.com/stfkolev");
+                    open("https://twitter.com/Tharang2K23");
                     break;
                 case "fb":
-                    open("https://www.facebook.com/stfkolev")
+                    open("https://www.facebook.com/Tharang2K23")
             }
         }
         Inherit(this, Element);
@@ -8610,9 +8610,6 @@
                 type: "Work",
                 width: 70
             }, {
-                type: "Lab",
-                width: 53
-            }, {
                 type: "About",
                 width: 80
             }].forEach((data, index) => {
@@ -8692,14 +8689,14 @@
         }
 
         function initText() {
-            ($text = $this.create(".text")).fontStyle("NexaBold", Device.mobile.phone ? 9 : 10, "#fff"), $text.css({
-                whiteSpace: "nowrap",
-                opacity: .6,
-                letterSpacing: Device.mobile.phone ? 3 : 4,
-                textTransform: "uppercase",
-                textAlign: "left",
-                width: "100%"
-            }), $text.text("CONTACT")
+            // ($text = $this.create(".text")).fontStyle("NexaBold", Device.mobile.phone ? 9 : 10, "#fff"), $text.css({
+            //     whiteSpace: "nowrap",
+            //     opacity: .6,
+            //     letterSpacing: Device.mobile.phone ? 3 : 4,
+            //     textTransform: "uppercase",
+            //     textAlign: "left",
+            //     width: "100%"
+            // }), $text.text("CONTACT")
         }
 
         function addHandlers() {
@@ -8707,10 +8704,10 @@
         }
 
         function hover(e) {
-            switch (e.action) {
-                case "over":
-                    UI.instance().showContact()
-            }
+            // switch (e.action) {
+            //     case "over":
+            //         UI.instance().showContact()
+            // }
         }
 
         function animateLine() {
@@ -9904,7 +9901,7 @@
                 outline: 1,
                 width: 80 * _buttonScale,
                 height: 46 * _buttonScale,
-                text: "LINK"
+                text: "EVENTS"
             })).element.css({
                 position: "relative",
                 display: "inline-block",
