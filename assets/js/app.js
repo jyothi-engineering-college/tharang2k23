@@ -5726,7 +5726,7 @@
             switch (state) {
                 case "about":
                     return About;
-                case "lab":
+                case "home":
                 case "work":
                     return Work;
                 default:
@@ -5866,7 +5866,7 @@
 
         function initNav() {
             let base = location.protocol + "//" + location.hostname;
-            _this.BASE = base, $this.create("nav", "nav").html(`\n        <ul>\n            <li><a href="${base}/home">Home</a></li>\n            <li><a href="${base}/work">Work</a></li>\n            <li><a href="${base}/lab">Lab</a></li>\n            <li><a href="${base}/about">About</a></li>\n        </ul>\n        `)
+            _this.BASE = base, $this.create("nav", "nav").html(`\n        <ul>\n            <li><a href="${base}/home">Home</a></li>\n            <li><a href="${base}/work">Work</a></li>\n            <li><a href="${base}/lab">Home</a></li>\n            <li><a href="${base}/about">About</a></li>\n        </ul>\n        `)
         }
         Inherit(this, Component);
         const _this = this;
@@ -8689,14 +8689,14 @@
         }
 
         function initText() {
-            // ($text = $this.create(".text")).fontStyle("NexaBold", Device.mobile.phone ? 9 : 10, "#fff"), $text.css({
-            //     whiteSpace: "nowrap",
-            //     opacity: .6,
-            //     letterSpacing: Device.mobile.phone ? 3 : 4,
-            //     textTransform: "uppercase",
-            //     textAlign: "left",
-            //     width: "100%"
-            // }), $text.text("CONTACT")
+            ($text = $this.create(".text")).fontStyle("NexaBold", Device.mobile.phone ? 9 : 10, "#fff"), $text.css({
+                whiteSpace: "nowrap",
+                opacity: .6,
+                letterSpacing: Device.mobile.phone ? 3 : 4,
+                textTransform: "uppercase",
+                textAlign: "left",
+                width: "100%"
+            }), $text.text("CONTACT")
         }
 
         function addHandlers() {
@@ -8704,10 +8704,10 @@
         }
 
         function hover(e) {
-            // switch (e.action) {
-            //     case "over":
-            //         UI.instance().showContact()
-            // }
+            switch (e.action) {
+                case "over":
+                    UI.instance().showContact()
+            }
         }
 
         function animateLine() {
