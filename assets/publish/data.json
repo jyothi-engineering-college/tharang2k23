@@ -1,7 +1,7 @@
 {
 	"about": {
-		"awards": "FWA (52)\nAwwwards (11)\nCannes (15)\nWebby (4)\nOneshow (5)\nEmmy (2)\nDNAD (5)\nADC (3)",
-		"description": "I strive to make the best digital experiences.\n\nOur websites, apps, installations, RV & AR experiences\nare all meticulously crafted in house by a tightly\nintegrated team of designers and developers. We\nwork with a specialized toolset which consistently\ndelivers award winning work through performance,\nefficiency and attention to detail."
+		"awards": "",
+		"description": ""
 	},
 	"lab": [
 		{
@@ -151,11 +151,11 @@
 	],
 	"work": [
 		{
-			"title": "~ AD ~",
-			"perma": "artificial-intelligence-and-data-science",
+			"title": "~ CSE ~",
+			"perma": "computer-science",
 			"index": 0,
 			"active": true,
-			"name": "~ AD ~",
+			"name": "~ CSE ~",
 			"client": "",
 			"video_offset": "7",
 			"brand": "https://cdn.activetheory.net/uploads/1516321144985.png",
@@ -169,8 +169,8 @@
 			"brightness": "0"
 		},
 		{
-			"title": "~ CSE ~",
-			"perma": "computer-science",
+			"title": "~ AD ~",
+			"perma": "artificial-intelligence-and-data-science",
 			"index": 1,
 			"client": "GSD&M",
 			"logo": "https://cdn.activetheory.net/work/airman-challenge/logo/1507240057592_file.png",
@@ -183,7 +183,7 @@
 			"video": "https://cdn.activetheory.net/uploads/1516321303519.mp4",
 			"image": "https://cdn.activetheory.net/uploads/1516321272511.jpeg",
 			"active": true,
-			"name": "~ CSE ~",
+			"name": "~ AD ~",
 			"brand": "https://cdn.activetheory.net/uploads/1516321255012.png",
 			"video_offset": "11",
 			"brightness": "0.5"
