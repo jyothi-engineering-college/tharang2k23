@@ -9901,7 +9901,7 @@
                 outline: 1,
                 width: 80 * _buttonScale,
                 height: 46 * _buttonScale,
-                text: "LINK"
+                text: "EVENTS"
             })).element.css({
                 position: "relative",
                 display: "inline-block",
