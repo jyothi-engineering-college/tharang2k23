@@ -7336,7 +7336,7 @@
             (_button = _this.initClass(UIButton, {
                 width: _width,
                 height: 56,
-                text: "VIEW WORK"
+                text: "ENTER"
             }, [$wrapper])).element.center(1, 0)
         }
 
